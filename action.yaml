@@ -1,4 +1,4 @@
-name: defectdojo action
+name: defectdojo import scan
 description: 'a github action that sends scan reports to a DefectDojo instance'
 inputs:
   defectdojo-url:
