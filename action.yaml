@@ -25,9 +25,6 @@ inputs:
   defectdojo-engagement-name:
     description: the defectdojo engagement name that the scan result relates to
     required: true
-  scan-results-directory:
-    description: the directory where the scan result to be uploaded are stored
-    required: true
   scan-results-file-name:
     description: the file name of the scan result to be uploaded are stored
     required: true
@@ -49,7 +46,7 @@ runs:
     DEFECT_DOJO_ENVIRONMENT_TYPE: ${{ inputs.defectdojo-environment-type }}
     DEFECT_DOJO_SCAN_TYPE: ${{ inputs.defectdojo-scan-type }}
     DEFECT_DOJO_ENGAGEMENT_NAME: ${{ inputs.defectdojo-engagement-name }}
-    SCAN_RESULTS_FILE_PATH: ${{ inputs.scan-results-directory }}/${{ inputs.scan-results-file-name }}
+    SCAN_RESULTS_FILE_PATH: /github/workspace/${{ inputs.scan-results-file-name }}
     CLIENT_CERTIFICATE_FILE_PATH: ${{ inputs.client-certificate-file-path }}
     CLIENT_KEY_FILE_PATH: ${{ inputs.client-key-file-path }}
 branding:
