@@ -1,21 +1,6 @@
 name: defectdojo action
 description: 'a github action that allows your pipeline to send scan result and check for outstanding findings against a defect dojo instance'
 inputs:
-  use-teleport:
-    description: if you require Teleport to access your defectdojo instance (yes/no)
-    required: true
-  teleport-fqdn:
-    description: the url of the teleport instance used to authenticate
-    required: false
-  teleport-version:
-    description: the version of teleport to use to authenticate
-    required: false
-  teleport-certificate-ttl:
-    description: the life time of the certificate provided by teleport
-    required: false
-  python-version:
-    description: the version of python to use
-    required: true
   defectdojo-url:
     description: the url of your defectdojo instance
     required: true
