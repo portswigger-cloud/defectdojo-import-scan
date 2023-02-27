@@ -35,8 +35,9 @@ inputs:
     description: the file path for a client side private key if required
     required: false
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: docker
+  image: docker://ghcr.io/portswigger-cloud/defectdojo-utils:latest
+  entrypoint: /usr/defectdojo-utils/src/import_scan_results.py
   env:
     DEFECT_DOJO_URL: ${{ inputs.defectdojo-url }}
     DEFECT_DOJO_USERNAME: ${{ inputs.defectdojo-username }}
