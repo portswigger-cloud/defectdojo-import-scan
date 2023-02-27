@@ -51,4 +51,4 @@ runs:
     CLIENT_KEY_FILE_PATH: ${{ inputs.client-key-file-path }}
 branding:
   icon: 'shield'
-  color: 'blue'
+  color: 'orange'
