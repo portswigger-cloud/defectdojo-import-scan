@@ -1,3 +1,3 @@
 FROM ghcr.io/portswigger-cloud/defectdojo-utils:latest
 
-CMD [ "python", "./import_scan_results.py" ]
+CMD [ "python", "/usr/defectdojo-utils/src/import_scan_results.py" ]
