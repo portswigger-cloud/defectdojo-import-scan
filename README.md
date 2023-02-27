@@ -81,5 +81,4 @@ Jobs:
           defectdojo-scan-type: Semgrep JSON Report
           defectdojo-engagement-name: Github Actions Initiated SAST Scan
           scan-results-file-name: semgrep.json
-
 ```

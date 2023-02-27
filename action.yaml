@@ -1,5 +1,5 @@
 name: defectdojo action
-description: 'a github action that allows your pipeline to send scan result and check for outstanding findings against a defect dojo instance'
+description: 'a github action that sends scan reports to a DefectDojo instance'
 inputs:
   defectdojo-url:
     description: the url of your defectdojo instance
