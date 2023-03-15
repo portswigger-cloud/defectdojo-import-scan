@@ -65,22 +65,22 @@ jobs:
     name: import semgrep report
     runs-on: ubuntu-latest
     steps:
-          - name: download scan results artifact
-            id: download-scan-results-artifact
-            uses: actions/download-artifact@v3
-            with:
-              name: semgrep-results
-          - name: import scan results into defectdojo
-            id: import-scan-results-into-defectdojo
-            uses: portswigger-cloud/defectdojo-github-action@v1
-            with:
-              defectdojo-url: defectdojo.example.com
-              defectdojo-username: ${{ secrets.defectdojo-username }}
-              defectdojo-password: ${{ secrets.defectdojo-password }}
-              defectdojo-product-type: example-product-type
-              defectdojo-product: example-product
-              defectdojo-environment-type: Production
-              defectdojo-scan-type: Semgrep JSON Report
-              defectdojo-engagement-name: Github Actions Initiated SAST Scan
-              scan-results-file-name: semgrep.json
+      - name: download scan results artifact
+        id: download-scan-results-artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: semgrep-results
+      - name: import scan results into defectdojo
+        id: import-scan-results-into-defectdojo
+        uses: portswigger-cloud/defectdojo-github-action@v1
+        with:
+          defectdojo-url: https://defectdojo.example.con
+          defectdojo-username: ${{ secrets.defectdojo-username }}
+          defectdojo-password: ${{ secrets.defectdojo-password }}
+          defectdojo-product-type: example-product-type
+          defectdojo-product: example-product
+          defectdojo-environment-type: Production
+          defectdojo-scan-type: Semgrep JSON Report
+          defectdojo-engagement-name: Github Actions Initiated SAST Scan
+          scan-results-file-name: semgrep.json
 ```
