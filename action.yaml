@@ -36,7 +36,7 @@ inputs:
     required: false
 runs:
   using: docker
-  image: docker://ghcr.io/portswigger-cloud/defectdojo-utils:v1.0.0
+  image: docker://ghcr.io/portswigger-cloud/defectdojo-utils:v1.0.1
   entrypoint: /usr/defectdojo-utils/src/import_scan_results.py
   env:
     DEFECT_DOJO_URL: ${{ inputs.defectdojo-url }}
